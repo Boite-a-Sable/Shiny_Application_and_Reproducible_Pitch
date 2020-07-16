@@ -1,0 +1,37 @@
+---
+title: "Shiny Application and Reproducible Pitch"
+author: "Cesar A"
+date: "15/07/2020"
+output:
+  ioslides_presentation: default
+  beamer_presentation: default
+  slidy_presentation: default
+---
+```{r, echo=FALSE}
+library(tidyverse)
+library(knitr)
+attach(diamonds)
+```
+
+## Display Diamonds file
+```{r}
+head(diamonds)
+```
+
+## Image Diamonds Qualities
+```{r}
+knitr::include_graphics('Cut Diamond1.png')
+```
+```{r}
+knitr::include_graphics('Color Diamonds2.png')
+```
+
+## Plot Quality/Price Rainbow
+```{r}
+plot(cut, col = rainbow(5))
+```
+
+## Price by Color
+```{r}
+boxplot(price ~ color, border = c("red","yellow","blue", "green","violet", "magenta","black"))
+```
